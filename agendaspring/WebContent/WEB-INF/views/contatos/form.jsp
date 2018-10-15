@@ -9,11 +9,12 @@
 <body>
 
 	<h1>Add contato </h1>
-		<form action="/agendaspring/contatos">
+		<form method="POST" action="/agendaspring/contatos">
 		<label>
 			<input type="text" name="Nome">			
 			<input type="text" name="Endereco">
 			<input type="text" name="Email">
+			<input type="text" name="dataNascimento">
 			
 			<button type="submit">Add</button>
 		</form>

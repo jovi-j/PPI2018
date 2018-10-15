@@ -20,7 +20,7 @@ public class ContatoDAO {
 
 	public boolean inserir(Contato contato) {
 
-		String sql = "insert into contatos (nome, email, endereco) values (?, ?, ?);";
+		String sql = "insert into contatos (nome, email, endereco, dataNascimento) values (?, ?, ?, ?);";
 
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
@@ -35,7 +35,6 @@ public class ContatoDAO {
 			stmt.close();
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}
@@ -136,6 +135,6 @@ public class ContatoDAO {
 		return result;
 	}
 
-	
+
 
 }
