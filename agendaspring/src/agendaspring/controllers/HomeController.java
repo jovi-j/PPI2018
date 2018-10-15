@@ -8,7 +8,13 @@ public class HomeController {
 	@RequestMapping("/")
 	public String homeSeiLa() {
 		System.out.println("Chamou o método home!");
-		return "home.jsp";
+		return "home";
+	}
+	
+	@RequestMapping("/oi")
+	public String home2SeiLa() {
+		System.out.println("Chamou o método home2!");
+		return "home2";
 	}
 
 }
