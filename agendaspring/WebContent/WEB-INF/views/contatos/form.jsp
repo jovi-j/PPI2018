@@ -10,13 +10,26 @@
 
 	<h1>Add contato </h1>
 		<form method="POST" action="/agendaspring/contatos">
-		<label>
-			<input type="text" name="Nome">			
-			<input type="text" name="Endereco">
-			<input type="text" name="Email">
+		<input type="hidden" name="comando" value="AdicionarContato">
+		<div>
+			<label>Nome: </label> 
+			<input type="text" name="nome">
+		</div>
+		<div>
+			<label>Email: </label> 
+			<input type="text" name="email">
+		</div>
+		<div>
+			<label>Endereço: </label> 
+			<input type="text" name="endereco">
+		</div>
+		<div>
+			<label>Data de Nascimento: </label>
 			<input type="text" name="dataNascimento">
-			
-			<button type="submit">Add</button>
+		</div>
+		<div>
+			<button type="submit">Adicionar</button>
+		</div>
 		</form>
 	
 

@@ -28,9 +28,9 @@ public class ContatoDAO {
 			stmt.setString(1, contato.getNome());
 			stmt.setString(2, contato.getEmail());
 			stmt.setString(3, contato.getEndereco());
-			if(contato.getDataNascimento() != null) {
+
 			stmt.setDate(4, new java.sql.Date(contato.getDataNascimento().getTimeInMillis()));
-			}
+
 			stmt.execute();
 			stmt.close();
 
