@@ -19,17 +19,28 @@
 			<tr>
 				<th>Nome</th>
 				<th>Email</th>
-				<th>Endereço</th>
+				<th>Endereï¿½o</th>
 				<th>Data de Nascimento</th>
+				<th>Apagar</th>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach var="contato" items="${contatos }">
+
 				<tr>
+
 					<td>${contato.nome }</td>
 					<td>${contato.email }</td>
 					<td>${contato.endereco }</td>
 					<td>${contato.dataNascimento.time }</td>
+					<td>
+						<form class="btn-apagar" action="/agendaspring/contatos/delete"
+							method="post">
+							<input type="hidden" name="id" value="${contato.id}" />
+							<button type="submit"></button>
+						</form>
+					</td>
+
 				</tr>
 			</c:forEach>
 
@@ -40,7 +51,3 @@
 
 </body>
 </html>
-
-
-
-

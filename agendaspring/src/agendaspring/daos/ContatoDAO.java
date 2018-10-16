@@ -92,10 +92,10 @@ public class ContatoDAO {
 		return true;
 	}
 
-	public boolean remover(Contato contato) {
+	public boolean remover(Long id) {
 		try {
 			PreparedStatement stmt = connection.prepareStatement("delete from contatos where id=?;");
-			stmt.setLong(1, contato.getId());
+			stmt.setLong(1, id);
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {

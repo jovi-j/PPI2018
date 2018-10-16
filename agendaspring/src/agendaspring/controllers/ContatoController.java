@@ -3,6 +3,7 @@ package agendaspring.controllers;
 import java.util.List;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,13 @@ public class ContatoController {
 
 		ContatoDAO cDAO = new ContatoDAO();
 		cDAO.inserir(contato);
+		return "contatos/ok";
+
+	}
+	@PostMapping("/contatos/delete")
+	public String deletar(Long id){
+		ContatoDAO cDAO = new ContatoDAO();
+		cDAO.remover(id);
 		return "contatos/ok";
 
 	}
