@@ -2,15 +2,23 @@ package agendaspring.models;
 
 import java.util.Calendar;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Contato {
 
 	private Long id;
+	@NotNull(message="{contato.campo.nulo}")
 	private String nome;
+	@NotNull(message="{contato.campo.nulo}")
 	private String email;
+	@NotNull(message="{contato.campo.nulo}")
 	private String endereco;
 	@DateTimeFormat(pattern="dd/mm/yyyy")
+	@Size(min=10, max=10, message="{contato.campo.pequeno}")
+	@NotNull(message="{contato.campo.nulo}")
 	private Calendar dataNascimento;
 
 	@Override

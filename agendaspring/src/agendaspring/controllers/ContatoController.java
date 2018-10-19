@@ -22,14 +22,14 @@ public class ContatoController {
 
 		ContatoDAO cDAO = new ContatoDAO();
 		cDAO.inserir(contato);
-		return "contatos/ok";
+		return "redirect:/contatos";
 
 	}
 	@PostMapping("/contatos/delete")
 	public String deletar(Long id){
 		ContatoDAO cDAO = new ContatoDAO();
 		cDAO.remover(id);
-		return "contatos/ok";
+		return "redirect:/contatos";
 
 	}
 
